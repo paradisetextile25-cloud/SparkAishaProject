@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+/* ── Design Tokens ─────────────────────────────────────── */
+:root {
+  --color-primary:    #E8CFCF;
+  --color-secondary:  #D8A7B1;
+  --color-accent:     #C08497;
+  --color-accent-dark:#A06880;
+  --color-bg:         #FDF6F8;
+  --color-dark:       #4A3F42;
+  --color-dark-light: #6B5A5F;
+  --color-white:      #FFFFFF;
+  --color-rose-light: #F7EAED;
+  --gradient-primary: linear-gradient(135deg, #E8CFCF 0%, #D8A7B1 100%);
+  --gradient-hero:    linear-gradient(135deg, #FDF6F8 0%, #F7EAED 50%, #EEDAD9 100%);
+  --font-heading:     'Playfair Display', Georgia, serif;
+  --font-body:        'Poppins', system-ui, sans-serif;
+  --shadow-soft:      0 4px 20px rgba(192,132,151,0.12);
+  --shadow-card:      0 8px 32px rgba(192,132,151,0.15);
+  --shadow-hover:     0 16px 48px rgba(192,132,151,0.25);
+  --radius-card:      16px;
+  --radius-btn:       50px;
+}
+
+/* ── Base Reset ────────────────────────────────────────── */
+*,
+*::before,
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ── Typography ────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-dark);
+  line-height: 1.2;
+}
+
+/* ── Custom Utilities ──────────────────────────────────── */
+.font-heading  { font-family: var(--font-heading); }
+.font-body     { font-family: var(--font-body); }
+.bg-brand      { background: var(--gradient-primary); }
+.text-accent   { color: var(--color-accent); }
+.text-dark     { color: var(--color-dark); }
+
+/* ── Button Base ───────────────────────────────────────── */
+.btn-primary {
+  background: var(--color-accent);
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-btn);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 0.02em;
+}
+.btn-primary:hover {
+  background: var(--color-accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(192,132,151,0.35);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-accent);
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-btn);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  border: 2px solid var(--color-accent);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 0.02em;
+}
+.btn-secondary:hover {
+  background: var(--color-accent);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(192,132,151,0.3);
+}
+
+/* ── Card Hover ────────────────────────────────────────── */
+.card-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ── Scrollbar ─────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
+
+/* ── Section Spacing ───────────────────────────────────── */
+.section-pad { padding: 5rem 0; }
+
+/* ── Gradient Badge ────────────────────────────────────── */
+.badge-gradient {
+  background: var(--gradient-primary);
+  color: var(--color-dark);
+  border-radius: 50px;
+  padding: 0.25rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* ── Star Rating ───────────────────────────────────────── */
+.star-filled  { color: #E8B86D; }
+.star-empty   { color: #D8C5C8; }
+
+/* ── Section Heading ───────────────────────────────────── */
+.section-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--color-dark);
+  line-height: 1.2;
+}
+.section-subheading {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  color: var(--color-dark-light);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+/* ── Image Overlay Effect ──────────────────────────────── */
+.img-overlay-hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(74,63,66,0.4) 100%);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.img-overlay-hover:hover::after { opacity: 1; }
+
+/* ── Animate Fade Up ───────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fadeUp 0.7s ease both;
+}
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
