@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using SparkAisha.API.DTOs.Auth;
-using SparkAisha.API.Services;
+using SparkAisha.Application.DTOs.Auth;
+using SparkAisha.Application.Interfaces;
 
 namespace SparkAisha.API.Controllers;
 

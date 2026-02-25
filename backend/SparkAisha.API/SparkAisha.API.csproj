@@ -18,4 +18,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SparkAisha.Application\SparkAisha.Application.csproj" />
+    <ProjectReference Include="..\SparkAisha.Infrastructure\SparkAisha.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

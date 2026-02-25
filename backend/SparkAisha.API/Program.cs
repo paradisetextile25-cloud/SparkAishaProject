@@ -3,10 +3,11 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using SparkAisha.API.Data;
-using SparkAisha.API.Models;
-using SparkAisha.API.Repositories;
-using SparkAisha.API.Services;
+using SparkAisha.Application.Interfaces;
+using SparkAisha.Domain.Entities;
+using SparkAisha.Infrastructure.Data;
+using SparkAisha.Infrastructure.Repositories;
+using SparkAisha.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

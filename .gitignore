@@ -145,3 +145,8 @@ test_payload.json
 
 # Solution files that might be IDE-specific
 *.sln.DotSettings
+
+# Secret configuration files
+backend/**/appsettings.Development.json
+backend/**/appsettings.*.json
+!backend/**/appsettings.json

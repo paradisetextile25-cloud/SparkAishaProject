@@ -1,8 +1,8 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using SparkAisha.API.DTOs;
-using SparkAisha.API.Services;
+using SparkAisha.Application.DTOs;
+using SparkAisha.Application.Interfaces;
 
 namespace SparkAisha.API.Controllers;
 
