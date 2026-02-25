@@ -1,43 +1,50 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
-import { useAuth } from '../context/AuthContext';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const { login } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    fetch("http://localhost:5098/api/auth/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        email: email,
-        password: password
-      })
-    })
-      .then(res => res.json())
-      .then(data => console.log("LOGIN RESPONSE:", data))
-      .catch(err => console.error("LOGIN ERROR:", err));
-
     setError('');
     setLoading(true);
 
-    const result = await login(email, password);
-    setLoading(false);
+    try {
+      const response = await fetch("http://localhost:5098/api/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email: email,
+          password: password
+        })
+      });
 
-    if (result.success) {
-      navigate('/');
-    } else {
-      setError(result.error);
+      console.log(response.status);
+      const data = await response.json();
+      console.log(data);
+
+      if (response.ok) {
+        localStorage.setItem("token", data.token);
+        navigate('/');
+      } else if (response.status === 401) {
+        console.error("Login failed:", data);
+        setError('Invalid email or password');
+      } else {
+        console.error("Login error:", data);
+        setError('An error occurred during login');
+      }
+    } catch (err) {
+      console.error("LOGIN ERROR:", err);
+      setError('Network error. Please try again.');
+    } finally {
+      setLoading(false);
     }
   };
 
