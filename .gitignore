@@ -1,5 +1,21 @@
+# ============================================
+# Vite + React Production-Ready .gitignore
+# ============================================
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+*.local
+
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,18 +23,63 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Testing
+coverage/
+*.lcov
+.nyc_output
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.swp
+*~
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+._*
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+.cache/
+
+# Backup files (IMPORTANT: prevents backup folders)
+*.backup
+*.bak
+*.old
+*.orig
+*BACKUP*
+.BACKUP*/
+src.BACKUP*/
+
+# Lock files (keep package-lock.json but ignore others if needed)
+# Uncomment next line if using yarn exclusively:
+# package-lock.json
+
+# Debug
+.vite-inspect/
+
+# Local development
+.eslintcache
+.stylelintcache
