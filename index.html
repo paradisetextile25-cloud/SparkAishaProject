@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SparkAisha Spa &amp; Wellness</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="nav__logo">SparkAisha</a>
+      <ul class="nav__list" id="nav-list">
+        <li><a href="#home" class="nav__link">Home</a></li>
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#gallery" class="nav__link">Gallery</a></li>
+        <li><a href="#testimonials" class="nav__link">Reviews</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Book Now</a></li>
+      </ul>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero__overlay"></div>
+    <div class="hero__content container">
+      <p class="hero__tagline">Luxury Spa &amp; Wellness</p>
+      <h1 class="hero__title">Restore Your<br /><em>Inner Glow</em></h1>
+      <p class="hero__description">
+        Indulge in a sanctuary of serenity. Experience world-class treatments
+        designed to rejuvenate your body, mind &amp; soul.
+      </p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary">Book a Treatment</a>
+        <a href="#services" class="btn btn--outline">Our Services</a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Announcement Banner -->
+  <div class="banner">
+    <div class="container">
+      <p>✨ Complimentary aromatherapy with every massage &nbsp;|&nbsp; 🌿 New seasonal facials now available &nbsp;|&nbsp; 🎁 Gift vouchers available</p>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">What We Offer</p>
+        <h2 class="section__title">Our Signature Services</h2>
+        <p class="section__subtitle">Each treatment is tailored to your unique needs, using only the finest natural ingredients.</p>
+      </div>
+      <div class="services__grid">
+        <div class="service-card">
+          <div class="service-card__icon">🌸</div>
+          <h3 class="service-card__title">Signature Facial</h3>
+          <p class="service-card__description">A deeply restorative facial using premium botanicals to cleanse, hydrate and illuminate your complexion.</p>
+          <div class="service-card__meta">
+            <span class="service-card__duration">60 min</span>
+            <span class="service-card__price">From $95</span>
+          </div>
+          <a href="#contact" class="service-card__link">Book →</a>
+        </div>
+        <div class="service-card service-card--featured">
+          <div class="service-card__badge">Popular</div>
+          <div class="service-card__icon">🪨</div>
+          <h3 class="service-card__title">Hot Stone Massage</h3>
+          <p class="service-card__description">Smooth, heated stones melt away tension and stress, leaving you in a state of deep relaxation and calm.</p>
+          <div class="service-card__meta">
+            <span class="service-card__duration">90 min</span>
+            <span class="service-card__price">From $130</span>
+          </div>
+          <a href="#contact" class="service-card__link">Book →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">🌊</div>
+          <h3 class="service-card__title">Body Wrap</h3>
+          <p class="service-card__description">Nourishing body wraps that detoxify, hydrate and smooth the skin for a radiant, silky finish.</p>
+          <div class="service-card__meta">
+            <span class="service-card__duration">75 min</span>
+            <span class="service-card__price">From $110</span>
+          </div>
+          <a href="#contact" class="service-card__link">Book →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">💆</div>
+          <h3 class="service-card__title">Deep Tissue Massage</h3>
+          <p class="service-card__description">Targeted techniques that release chronic muscle tension and restore natural movement and flexibility.</p>
+          <div class="service-card__meta">
+            <span class="service-card__duration">60 min</span>
+            <span class="service-card__price">From $100</span>
+          </div>
+          <a href="#contact" class="service-card__link">Book →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">🌺</div>
+          <h3 class="service-card__title">Aromatherapy</h3>
+          <p class="service-card__description">A holistic massage blending pure essential oils to ease stress, lift mood and restore harmony.</p>
+          <div class="service-card__meta">
+            <span class="service-card__duration">60 min</span>
+            <span class="service-card__price">From $90</span>
+          </div>
+          <a href="#contact" class="service-card__link">Book →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">💅</div>
+          <h3 class="service-card__title">Luxury Manicure &amp; Pedicure</h3>
+          <p class="service-card__description">Pamper your hands and feet with our premium nail treatments, exfoliation and moisturising ritual.</p>
+          <div class="service-card__meta">
+            <span class="service-card__duration">75 min</span>
+            <span class="service-card__price">From $75</span>
+          </div>
+          <a href="#contact" class="service-card__link">Book →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about section" id="about">
+    <div class="container about__container">
+      <div class="about__visual">
+        <div class="about__image-wrap">
+          <div class="about__image about__image--main"></div>
+          <div class="about__image about__image--accent"></div>
+        </div>
+        <div class="about__stat-card">
+          <span class="about__stat-number">12+</span>
+          <span class="about__stat-label">Years of Excellence</span>
+        </div>
+      </div>
+      <div class="about__content">
+        <p class="section__label">Our Story</p>
+        <h2 class="section__title">A Sanctuary Born From Passion</h2>
+        <p class="about__text">
+          SparkAisha Spa was founded on a simple belief: everyone deserves a
+          moment of pure, uninterrupted peace. Nestled in a tranquil setting,
+          our boutique spa offers an intimate escape from the demands of everyday life.
+        </p>
+        <p class="about__text">
+          Our team of highly trained therapists brings years of expertise and
+          genuine care to every treatment. We source only ethically produced,
+          natural ingredients to ensure every experience is as kind to the
+          planet as it is to your skin.
+        </p>
+        <div class="about__features">
+          <div class="about__feature">
+            <span class="about__feature-icon">🌿</span>
+            <span>100% Natural Products</span>
+          </div>
+          <div class="about__feature">
+            <span class="about__feature-icon">🏆</span>
+            <span>Award-Winning Therapists</span>
+          </div>
+          <div class="about__feature">
+            <span class="about__feature-icon">♻️</span>
+            <span>Eco-Conscious Practices</span>
+          </div>
+          <div class="about__feature">
+            <span class="about__feature-icon">🕊️</span>
+            <span>Peaceful Private Rooms</span>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn--primary">Book Your Escape</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">Our Space</p>
+        <h2 class="section__title">Step Into Serenity</h2>
+      </div>
+      <div class="gallery__grid">
+        <div class="gallery__item gallery__item--large" style="background-color: #c8a8a8;"></div>
+        <div class="gallery__item" style="background-color: #a8b8c8;"></div>
+        <div class="gallery__item" style="background-color: #b8c8a8;"></div>
+        <div class="gallery__item gallery__item--wide" style="background-color: #d4bfa8;"></div>
+        <div class="gallery__item" style="background-color: #c8c8a8;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">Client Reviews</p>
+        <h2 class="section__title">What Our Guests Say</h2>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"The hot stone massage was the most relaxing experience of my life. Aisha and her team are so warm and professional. I left feeling like a completely new person!"</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">S</div>
+            <div>
+              <strong>Sophia M.</strong>
+              <span>Regular Guest</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card testimonial-card--featured">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"I've been to many spas around the world, but SparkAisha truly stands out. The attention to detail, the ambiance, the treatments — all absolutely exceptional. My go-to place for self-care."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">R</div>
+            <div>
+              <strong>Rachel T.</strong>
+              <span>Loyal Client — 3 years</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"The signature facial transformed my skin! I've struggled with dullness for years and after just one session I had the most radiant glow. Highly recommend to everyone."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">J</div>
+            <div>
+              <strong>Jamie L.</strong>
+              <span>First-Time Guest</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking / Contact Section -->
+  <section class="contact section" id="contact">
+    <div class="container contact__container">
+      <div class="contact__info">
+        <p class="section__label">Get In Touch</p>
+        <h2 class="section__title">Book Your Treatment</h2>
+        <p class="contact__description">
+          Ready to relax? Reach out and one of our consultants will help you choose
+          the perfect treatment and find a time that suits you.
+        </p>
+        <ul class="contact__details">
+          <li>
+            <span class="contact__detail-icon">📍</span>
+            <span>12 Blossom Lane, Wellness Quarter, London W1A 2AB</span>
+          </li>
+          <li>
+            <span class="contact__detail-icon">📞</span>
+            <span>+44 (0) 20 7123 4567</span>
+          </li>
+          <li>
+            <span class="contact__detail-icon">✉️</span>
+            <span>hello@sparkaisha.com</span>
+          </li>
+          <li>
+            <span class="contact__detail-icon">🕐</span>
+            <span>Mon – Sat: 9am – 8pm &nbsp;|&nbsp; Sun: 10am – 6pm</span>
+          </li>
+        </ul>
+      </div>
+      <form class="contact__form" id="booking-form" novalidate>
+        <div class="form__row">
+          <div class="form__group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Emma" required />
+          </div>
+          <div class="form__group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Johnson" required />
+          </div>
+        </div>
+        <div class="form__group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="emma@example.com" required />
+        </div>
+        <div class="form__group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+44 7700 000000" />
+        </div>
+        <div class="form__group">
+          <label for="service">Preferred Service</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Select a treatment…</option>
+            <option>Signature Facial</option>
+            <option>Hot Stone Massage</option>
+            <option>Body Wrap</option>
+            <option>Deep Tissue Massage</option>
+            <option>Aromatherapy</option>
+            <option>Luxury Manicure &amp; Pedicure</option>
+            <option>Other / Consultation</option>
+          </select>
+        </div>
+        <div class="form__group">
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" name="date" />
+        </div>
+        <div class="form__group">
+          <label for="message">Additional Notes</label>
+          <textarea id="message" name="message" rows="3" placeholder="Any allergies, preferences or special requests…"></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Request Booking</button>
+        <div class="form__success" id="form-success" hidden>
+          ✅ Thank you! We'll be in touch within 24 hours to confirm your booking.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__brand">
+        <span class="footer__logo">SparkAisha</span>
+        <p class="footer__tagline">Your sanctuary of serenity &amp; wellness.</p>
+        <div class="footer__socials">
+          <a href="#" aria-label="Instagram" class="footer__social">📷</a>
+          <a href="#" aria-label="Facebook" class="footer__social">👍</a>
+          <a href="#" aria-label="TikTok" class="footer__social">🎵</a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Facial Treatments</a></li>
+          <li><a href="#services">Massage Therapy</a></li>
+          <li><a href="#services">Body Treatments</a></li>
+          <li><a href="#services">Nail Care</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Book Now</a></li>
+          <li><a href="#contact">Gift Vouchers</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4>Policies</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Cancellation Policy</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2026 SparkAisha Spa &amp; Wellness. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
