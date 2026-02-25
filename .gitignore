@@ -1,40 +1,106 @@
 # ============================================
-# Vite + React Production-Ready .gitignore
+# SparkAisha Monorepo .gitignore
 # ============================================
 
+# ===================
+# FRONTEND (Vite + React)
+# ===================
+
 # Dependencies
-node_modules/
-.pnp
-.pnp.js
-.yarn/install-state.gz
+frontend/node_modules/
+frontend/.pnp
+frontend/.pnp.js
+frontend/.yarn/
 
 # Build outputs
-dist/
-dist-ssr/
-build/
-*.local
+frontend/dist/
+frontend/dist-ssr/
+frontend/build/
+frontend/*.local
 
 # Logs
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+frontend/logs/
+frontend/*.log
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+frontend/lerna-debug.log*
 
 # Testing
-coverage/
-*.lcov
-.nyc_output
+frontend/coverage/
+frontend/*.lcov
+frontend/.nyc_output
 
 # Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.env*.local
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/.env*.local
+
+# Cache
+frontend/.cache/
+frontend/.vite-inspect/
+frontend/.eslintcache
+frontend/.stylelintcache
+
+# ===================
+# BACKEND (ASP.NET Core)
+# ===================
+
+# Build results
+backend/**/bin/
+backend/**/obj/
+backend/**/out/
+
+# Visual Studio files
+backend/**/.vs/
+backend/.vs/
+backend/**/*.user
+backend/**/*.userosscache
+backend/**/*.sln.docstates
+backend/**/*.suo
+backend/**/*.user
+backend/**/*.userprefs
+backend/**/*.pidb
+backend/**/*.sln.iml
+
+# ReSharper
+backend/**/_ReSharper*/
+backend/**/*.[Rr]e[Ss]harper
+backend/**/*.DotSettings.user
+
+# NuGet
+backend/**/packages/
+backend/**/*.nupkg
+backend/**/*.snupkg
+backend/**/project.lock.json
+backend/**/project.fragment.lock.json
+backend/**/artifacts/
+
+# ASP.NET Scaffolding
+backend/**/ScaffoldingReadMe.txt
+
+# Azure Functions
+backend/**/local.settings.json
+
+# User-specific files
+backend/**/*.user
+backend/**/*.rsuser
+backend/**/*.suo
+backend/**/*.sln.docstates
+
+# ===================
+# SHARED / GENERAL
+# ===================
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+._*
 
 # Editor directories and files
 .vscode/*
@@ -43,43 +109,39 @@ coverage/
 !.vscode/tasks.json
 !.vscode/launch.json
 .idea/
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
 *.swp
+*.swo
 *~
-
-# OS files
-Thumbs.db
-Desktop.ini
-.DS_Store
-._*
+*.sw?
 
 # Temporary files
 *.tmp
 *.temp
 *.cache
-.cache/
 
-# Backup files (IMPORTANT: prevents backup folders)
+# Backup files
 *.backup
 *.bak
 *.old
 *.orig
-*BACKUP*
+*BACKUP*/
+*.BACKUP
 .BACKUP*/
-src.BACKUP*/
 
-# Lock files (keep package-lock.json but ignore others if needed)
-# Uncomment next line if using yarn exclusively:
-# package-lock.json
+# Logs
+*.log
 
-# Debug
-.vite-inspect/
+# Environment files (sensitive data)
+.env
+.env.local
+.env.*.local
 
-# Local development
-.eslintcache
-.stylelintcache
+# Old nested structure (cleanup)
+frontend/spark-aisha-directory/
+
+# Test files
+test_payload.json
+*.test.json
+
+# Solution files that might be IDE-specific
+*.sln.DotSettings
